@@ -8,7 +8,6 @@
 
 <script setup>
 import { ref, defineEmits } from "vue";
-//defineProps({inputValue: Number})
 const inputValue = ref();
 const adderEvnt = defineEmits({ sendValu: (value) => value }, "resetSum");
 const reset = () => {
