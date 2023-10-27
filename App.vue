@@ -1,6 +1,6 @@
 <template>
   <div>
-    <calc :sumProp="sum" />
+    <h3>sum = {{ sum }}</h3>
   </div>
   <div>
     <adder @sendValu="showSumRes" @resetSum="sum = 0" />
@@ -10,11 +10,10 @@
 <script setup>
 import { ref } from "vue";
 import adder from "./assets/components/counter-calculator/add-num.vue";
-import calc from "./assets/components/counter-calculator/calc-num.vue";
 
 const sum = ref(0);
-const showSumRes = (externalUname) => {
+const showSumRes = (valueFromEvent) => {
   console.log("this function called by the event!");
-  sum.value += externalUname;
+  sum.value += valueFromEvent;
 };
 </script>
